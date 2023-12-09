@@ -1,0 +1,11 @@
+{
+  "name": "strivefy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/G-V-Utong/strivefy.git",
+  "author": "Godswill Utong <godswillutong@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
