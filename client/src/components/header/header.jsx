@@ -4,10 +4,12 @@ const header = () => {
   return (
     <div>
       <nav className='header'>
-      <div className="header__logo"></div>
-      <div className="header___buttons">
-        <button>Sign In</button>
-        <button>Sign Out</button>
+      <div className="header__logo">
+        <img src="public/images/Main logo.PNG" alt="Logo" height={40} />
+      </div>
+      <div className="header__buttons">
+        <button className="header__buttons__secondary">Sign In</button>
+        <button className="header__buttons__primary">Sign Up</button>
       </div>
     </nav>
     </div>

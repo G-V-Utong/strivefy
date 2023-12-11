@@ -1,5 +1,4 @@
 import Header from './components/header/header'
-import './he'
 import './App.css'
 
 function App() {
