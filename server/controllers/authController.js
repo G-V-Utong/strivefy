@@ -1,11 +1,11 @@
-const User = require("../../database/user.model");
+const User = require("../../database/model/user.model");
 const jwt = require("jsonwebtoken");
 const validator = require("email-validator");
 
 const signin = async (req, res) => {
   let { email, password } = req.body;
   try {
-    let user = await User.findOne({ email: email });
+    let user = await User.findOne({ email });
     if (!user) {
         return res.status(400).send('email does not exist');
     }

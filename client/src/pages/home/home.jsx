@@ -2,7 +2,12 @@
 
 const Home = () => {
   return (
-    <div>
+    <div className='home'>
+    <div className="home__container">
+      <div className="hero">
+        
+      </div>
+    </div>
       
     </div>
   )

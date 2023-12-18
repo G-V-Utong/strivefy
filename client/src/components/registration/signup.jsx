@@ -1,8 +1,12 @@
 import "./registration.scss";
 import "../../styles/components/_button.scss";
 import { useState } from "react";
+import {useDispatch } from 'react-redux'
+import { register } from "../../redux/authSlice";
 
 const Signup = () => {
+  const dispatch = useDispatch();
+
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -11,7 +15,15 @@ const Signup = () => {
   });
 
   const handleSubmit = (e) => {
+      e.preventDefault();
 
+      dispatch(
+        register({
+          username: state.username,
+          password: state.password,
+          email: state.email
+        })
+      )
   }
 
   const handleChange = (e) => {
