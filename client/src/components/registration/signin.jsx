@@ -1,8 +1,9 @@
 import "./registration.scss";
+import React from "react";
 import "../../styles/components/_button.scss";
 import { useState } from "react";
 import {useDispatch } from 'react-redux'
-import { register } from "../../redux/authSlice";
+import { register, signin } from "../../redux/authSlice";
 
 const Signin = () => {
 
@@ -19,7 +20,7 @@ const Signin = () => {
         e.preventDefault();
 
         dispatch(
-          register({
+          signin({
             password: state.password,
             email: state.email
           })

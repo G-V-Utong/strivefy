@@ -1,3 +1,4 @@
+import React from "react";
 import "./home.scss";
 import "../../styles/components/_button.scss";
 import { useSelector } from "react-redux";
@@ -25,7 +26,7 @@ const Home = () => {
               <div className="body__buttons">
                 {currentUser && currentUser.token ? (
                    <Link to="/dashboard" className="body__buttons__primary">
-                   <button className="body__buttons__primary">Get started</button>
+                   <button className="body__buttons__primary">Go to Dashboard</button>
                   </Link>
                 ) : (
                   <Link to="/signin" className="body__buttons__primary">
