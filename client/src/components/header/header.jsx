@@ -2,7 +2,8 @@ import'./header.scss'
 
 const header = () => {
   return (
-    <div>
+    <div className='header_container'>
+      <div className="header_container__subcontainer">
       <nav className='header'>
       <div className="header__logo">
         <img src="public/images/Main logo.PNG" alt="Logo" height={40} />
@@ -12,6 +13,7 @@ const header = () => {
         <button className="header__buttons__primary">Sign Up</button>
       </div>
     </nav>
+      </div>
     </div>
   )
 }

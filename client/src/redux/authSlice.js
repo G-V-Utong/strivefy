@@ -1,10 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from 'axios';
+import axios from "axios";
 import history from "../history";
+
+const initialUser = localStorage.getItem("auth")
+  ? JSON.parse(localStorage.getItem("auth"))
+  : null;
+
 
 const initialState = {
   isLoading: false,
-  currentUser: null,
+  currentUser: initialUser,
   error: null,
 };
 
@@ -61,36 +66,36 @@ export const register = (user) => async (dispatch) => {
       config
     );
 
-    if(response){
+    if (response) {
       dispatch(registerSuccess(response.data));
       console.log(response.data);
-      history.push('/signin');
-      window.location.reload()
-    }else{
-      dispatch(registerFailure())
-      console.log('failed')
+      history.push("/signin");
+      window.location.reload();
+    } else {
+      dispatch(registerFailure());
+      console.log("failed");
     }
   } catch (error) {
-    dispatch(registerFailure())
+    dispatch(registerFailure());
   }
 };
 
-export const signin = user => async(dispatch)=>{
+export const signin = (user) => async (dispatch) => {
   try {
     const response = await axios.post(
       "http://localhost:4000/auth/signin",
-      user,
+      user
     );
 
-    if(response) {
-      localStorage.setItem('auth', JSON.stringify(response.data));
+    if (response) {
+      localStorage.setItem("auth", JSON.stringify(response.data));
       dispatch(loginSuccess(response.data));
-      history.push('/dashboard');
+      history.push("/dashboard");
       window.location.reload();
     } else {
-      dispatch(loginFailure())
+      dispatch(loginFailure());
     }
   } catch (error) {
-    dispatch(loginFailure())
+    dispatch(loginFailure());
   }
-}
+};
