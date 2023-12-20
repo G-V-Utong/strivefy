@@ -11,8 +11,12 @@ const TaskManager = () => {
         <Sidebar />
       </div>
       <div className="taskmanager__right">
-        <AddTask/>
-        <TaskList/>
+        <div className="taskmanager__addtask">
+          <AddTask />
+        </div>
+        <div className="taskmanager__tasklist">
+          <TaskList />
+        </div>
       </div>
     </div>
   );
