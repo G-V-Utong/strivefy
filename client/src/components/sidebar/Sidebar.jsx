@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './sidebar.scss'
 
 const Sidebar = () => {
     const {auth} = useSelector((state) => ({...state}));
@@ -8,9 +9,9 @@ const Sidebar = () => {
     <div>
       <ul className="sidebar">
         <li className="list-item">
-            {currentUser.username}
+         <h5>Hello, {currentUser.username} </h5> 
         </li>
-        
+
       </ul>
     </div>
   )
