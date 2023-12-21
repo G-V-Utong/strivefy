@@ -20,7 +20,7 @@ const AddTask = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTask(state.task, currentUser._id, currentUser));
+    dispatch(addTask(state.task, currentUser.id));
     setState({
         task: ''
     });
