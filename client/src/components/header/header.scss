@@ -26,6 +26,24 @@
         align-items: center;
     }
 
+    &__menu {
+        width: 35%;
+
+        &__list {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            
+        }
+
+        &__listitem {
+            cursor: pointer;
+            &:hover {
+                color: #FE4066;
+            }
+        }
+    }
+
     &__buttons {
         border-left: 1px solid #d3d3d3;
         padding-left: 10px;

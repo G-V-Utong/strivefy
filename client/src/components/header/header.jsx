@@ -25,6 +25,52 @@ const Header = () => {
       <div className="header__logo">
         <img src="public/images/Main logo.PNG" alt="Logo" height={40} />
       </div>
+      <div className="header__menu">
+        <ul className="header__menu__list">
+        {auth.currentUser && auth.currentUser.token ? (
+						<>
+            <li className="header__menu__listitem">
+            <Link to='/' className=''>
+                Home
+              </Link>
+            </li>
+            <li className="header__menu__listitem">
+            <Link to='/dashboard' className=''>
+                Dashboard
+              </Link>
+            </li>
+            <li className="header__menu__listitem">
+            <Link to='/about' className=''>
+                About Us
+              </Link>
+            </li>
+            <li className="header__menu__listitem">
+            <Link to='/contact' className=''>
+                Contact
+              </Link>
+            </li>
+            </>
+					) : (
+						<>
+							<li className="header__menu__listitem">
+          <Link to='/' className=''>
+							Home
+						</Link>
+          </li>
+          <li className="header__menu__listitem">
+          <Link to='/about' className=''>
+							About Us
+						</Link>
+          </li>
+          <li className="header__menu__listitem">
+          <Link to='/contact' className=''>
+							Contact
+						</Link>
+          </li>
+						</>
+          )}
+        </ul>
+      </div>
       <div className="header__buttons">
       {auth.currentUser && auth.currentUser.token ? (
 						<Link to='/signin' className='' onClick={handleClick}>

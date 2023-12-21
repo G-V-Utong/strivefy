@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home";
 import TaskManager from "./pages/taskManagement/TaskManager";
 import Dashboard from "./pages/dashboard/Dashboard";
+import AboutUs from "./pages/About Us/AboutUs";
+import Contact from "./pages/contact/Contact";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/taskmanager" element={<TaskManager />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>

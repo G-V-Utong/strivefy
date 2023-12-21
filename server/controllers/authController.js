@@ -12,7 +12,7 @@ const signin = async (req, res) => {
 
     user.comparePassword(password, (err, match) => {
         if (!match || err ) return res.status(400).send('password does not match');
-        let token = jwt.sign({ _id: user._id }, 'usertokenstring', { expiresIn: '24h'});
+        let token = jwt.sign({ _id: user._id }, 'usertokenstring', { expiresIn: '1h'});
         res.status(200).send({
             token,
             username: user.username,
