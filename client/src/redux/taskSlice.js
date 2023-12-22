@@ -59,6 +59,7 @@ export const addTask = (task, id) => async (dispatch) => {
 		id,
 	};
 	const response = await axios.post('http://localhost:4000/task/add', taskData);
+	console.log(response)
 	if (response) {
 		localStorage.setItem('task', JSON.stringify(response.data));
 

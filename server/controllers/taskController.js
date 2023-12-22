@@ -3,10 +3,12 @@ const Task = require('../../database/model/task.model');
 
 const addTask = async (req, res) => {
 	const { task, id } = req.body;
-
+    console.log(task);
+    console.log(id);
+    
 	try {
 		if (!task) return res.status(400).send('please enter the task');
-		if (task.length < 10) res.status(400).send('add minimum 10 char');
+		if (task.length < 3) res.status(400).send('add minimum 3 characters');
 		const taskDetail = await new Task({
 			task,
 			createdBy: id,

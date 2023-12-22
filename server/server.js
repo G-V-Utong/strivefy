@@ -3,6 +3,7 @@ require('dotenv').config();
 db = require('../database/db');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes')
+const taskRoutes = require('./routes/taskRoutes')
 const morgan = require('morgan');
 
 

@@ -23,6 +23,7 @@ const AddTask = () => {
     dispatch(addTask(state.task, currentUser.id));
     setState({
         task: ''
+        
     });
   }
 
