@@ -16,18 +16,19 @@
     }
 
     .box {
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
         border-radius: 10px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         @include flex-center(flex, row, center, center);
         margin: 3rem 0;
+        padding: 1rem;
 
     }
     .taskcount {
         display: flex;
         width: 100%;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     &__rightContent {
@@ -42,4 +43,37 @@
     //     width: 20rem;
 
     // }
+
+    .todo {
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-size: 4rem;
+            font-weight: normal;
+        }
+
+        p{
+            font-size: medium;
+        }
+    }
+
+    .done {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 4rem;
+            font-weight: normal;
+        }
+
+
+        p{
+            font-size: medium;
+        }
+    }
+
+    .add_task {
+        display: flex;
+        justify-content: center;
+    }
 }
