@@ -3,6 +3,7 @@ import './addtask.scss';
 import { useDispatch, useSelector } from "react-redux";
 import { addTask } from "../../redux/taskSlice";
 
+
 const AddTask = () => {
     const dispatch = useDispatch();
     const { auth } = useSelector((state) => ({...state}));
@@ -39,7 +40,9 @@ const AddTask = () => {
             value={state.task}
           />
 
-          <button className="button">Add Task</button>
+          <div className="body__buttons">
+          <button className="body__buttons__secondary">Add Task</button>
+          </div>
         </form>
       </div>
     </div>

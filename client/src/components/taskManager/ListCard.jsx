@@ -16,11 +16,8 @@ const ListCard = (items) => {
 	};
 
 	return (
-		<div>
+		<div className='menuCard'>
 			<ul className={` ${item.status === 'done' ? 'completed menu' : 'menu'}`}>
-				<li>
-					<p>{item._id}</p>
-				</li>
 				<li>
 					<p>{item.task}</p>
 				</li>
@@ -40,7 +37,7 @@ const ListCard = (items) => {
 					>
 						<BiChevronRight />
 					</button>
-					<button onClick={handleDelete}>
+					<button onClick={handleDelete} className='trash'>
 						<BiTrash />
 					</button>
 				</li>

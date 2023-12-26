@@ -21,19 +21,16 @@ const TaskList = () => {
 		<div>
 			<ul className='list-header'>
 				<li>
-					<h5>Id</h5>
+					<h5>Your Tasks</h5>
 				</li>
 				<li>
-					<h5>Issue Name</h5>
-				</li>
-				<li>
-					<h5>Status</h5>
+					<h5>Task Status</h5>
 				</li>
 				<li>
 					<h5>Action</h5>
 				</li>
 			</ul>
-			{Object.values(AllTasks).map((item) => {
+			{Object.values(AllTasks).slice(0).reverse().map((item) => {
 				return <ListCard key={item._id} item={item} />;
 			})}
 		</div>

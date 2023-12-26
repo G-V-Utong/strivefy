@@ -68,7 +68,7 @@ const Signin = () => {
 
             <div className="form-group"> 
             <div className="body__buttons">
-            <button className="body__buttons__primary">Sign in</button>
+            <button className="body__buttons__secondary">Sign in</button>
             </div>
             </div>
           </form>
