@@ -38,33 +38,25 @@ const statusChange = async (req, res) => {
 	try {
 		let task = await Task.findById({ _id: id });
 		if (string === 'right') {
-			if (task.status === 'backlog') {
-				task.status = 'todo';
+			if (task.status === 'Todo') {
+				task.status = 'Pending';
 				task.save();
 				return res.send(task);
-			} else if (task.status === 'todo') {
-				task.status = 'pending';
-				task.save();
-				return res.send(task);
-			} else if (task.status === 'pending') {
-				task.status = 'done';
+			} else if (task.status === 'Pending') {
+				task.status = 'Completed';
 				task.save();
 				return res.send(task);
 			}
 		} else {
-			if (task.status === 'done') {
-				task.status = 'pending';
+			if (task.status === 'Completed') {
+				task.status = 'Pending';
 				task.save();
 				return res.send(task);
-			} else if (task.status === 'pending') {
-				task.status = 'todo';
+			} else if (task.status === 'Pending') {
+				task.status = 'Todo';
 				task.save();
 				return res.send(task);
-			} else if (task.status === 'todo') {
-				task.status = 'backlog';
-				task.save();
-				return res.send(task);
-			}
+			} 
 		}
 	} catch (error) {}
 };

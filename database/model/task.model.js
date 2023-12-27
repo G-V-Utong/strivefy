@@ -5,8 +5,8 @@ const taskSchema = mongoose.Schema(
 		task: { type: String },
 		status: {
 			type: String,
-			enum: ['backlog', 'todo', 'pending', 'done'],
-			default: 'backlog',
+			enum: ['Todo', 'Pending', 'Completed'],
+			default: 'Todo',
 		},
 		createdBy: {
 			type: mongoose.Schema.Types.ObjectId,

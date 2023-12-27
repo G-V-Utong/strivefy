@@ -17,7 +17,7 @@ const ListCard = (items) => {
 
 	return (
 		<div className='menuCard'>
-			<ul className={` ${item.status === 'done' ? 'completed menu' : 'menu'}`}>
+			<ul className={` ${item.status === 'Completed' ? 'completed menu' : 'menu'}`}>
 				<li>
 					<p>{item.task}</p>
 				</li>
@@ -26,13 +26,13 @@ const ListCard = (items) => {
 				</li>
 				<li>
 					<button
-						disabled={item.status === 'backlog'}
+						disabled={item.status === 'Todo'}
 						onClick={() => ArrowClick('left')}
 					>
 						<BiChevronLeft />
 					</button>
 					<button
-						disabled={item.status === 'done'}
+						disabled={item.status === 'Completed'}
 						onClick={() => ArrowClick('right')}
 					>
 						<BiChevronRight />

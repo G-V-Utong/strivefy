@@ -13,7 +13,6 @@ const Signin = () => {
         email: "",
         password: "",
         confirmPassword: "",
-        username: "",
       });
     
       const handleSubmit = (e) => {
@@ -33,7 +32,7 @@ const Signin = () => {
           [e.target.name]: e.target.value
         })
       }
-      console.log(state.email, state.password, state.confirmPassword, state.username);
+      // console.log(state.email, state.password, state.confirmPassword, state.username);
       
   return (
     <div>
@@ -68,7 +67,7 @@ const Signin = () => {
 
             <div className="form-group"> 
             <div className="body__buttons">
-            <button className="body__buttons__secondary">Sign in</button>
+            <button className="body__buttons__primary">Sign in</button>
             </div>
             </div>
           </form>

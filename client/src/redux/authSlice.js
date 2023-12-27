@@ -51,7 +51,8 @@ export const register = (user) => async (dispatch) => {
   const formdata = new FormData();
 
   try {
-    formdata.append("username", user.username);
+    formdata.append("firstName", user.firstName);
+    formdata.append("lastName", user.lastName);
     formdata.append("password", user.password);
     formdata.append("email", user.email);
 

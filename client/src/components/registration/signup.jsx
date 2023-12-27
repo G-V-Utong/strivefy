@@ -11,7 +11,8 @@ const Signup = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    username: "",
+    firstName: "",
+    lastName: ""
   });
 
   const handleSubmit = (e) => {
@@ -19,7 +20,8 @@ const Signup = () => {
 
       dispatch(
         register({
-          username: state.username,
+          firstName: state.firstName,
+          lastName: state.lastName,
           password: state.password,
           email: state.email
         })
@@ -32,7 +34,7 @@ const Signup = () => {
       [e.target.name]: e.target.value
     })
   }
-  console.log(state.email, state.password, state.confirmPassword, state.username);
+  // console.log(state.email, state.password, state.confirmPassword, state.username);
   
   return (
     <div>
@@ -43,9 +45,19 @@ const Signup = () => {
             <div className="form-group">
               <input
                 type="text"
-                placeholder="Enter your full name"
-                name="username"
-                value={state.username}
+                placeholder="Enter your first name"
+                name="firstName"
+                value={state.firstName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Enter your last name"
+                name="lastName"
+                value={state.lastName}
                 onChange={handleChange}
                 required
               />

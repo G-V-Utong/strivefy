@@ -1,4 +1,3 @@
-import React from "react";
 import "./taskManager.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import AddTask from "../../components/taskManager/AddTask";

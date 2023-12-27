@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { getAllTasks } from "../../redux/taskSlice";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import AddTask from "../../components/taskManager/AddTask";
+// import AddTask from "../../components/taskManager/AddTask";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -20,12 +20,12 @@ const Dashboard = () => {
   let completedTask = [];
   for (let i = 0; i < AllTasks.length; i++) {
     if (
-      AllTasks[i].status === "todo" ||
-      AllTasks[i].status === "pending" ||
+      AllTasks[i].status === "Todo" ||
+      AllTasks[i].status === "Pending" ||
       AllTasks[i].status === "backlog"
     ) {
       pendingTask.push(AllTasks[i]);
-    } else if (AllTasks[i].status === "done") {
+    } else if (AllTasks[i].status === "Completed") {
       completedTask.push(AllTasks[i]);
     }
   }

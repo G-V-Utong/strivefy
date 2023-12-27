@@ -15,7 +15,8 @@ const signin = async (req, res) => {
         let token = jwt.sign({ _id: user._id }, 'usertokenstring', { expiresIn: '1h'});
         res.status(200).send({
             token,
-            username: user.username,
+            firstName: user.firstName,
+            lastName: user.lastName,
             email: user.email,
             id: user._id,
             createdAt: user.createdAt,
@@ -28,9 +29,12 @@ const signin = async (req, res) => {
 };
 
 const register = async (req, res) => {
-  const { email, password, username } = req.body;
+  console.log(req.body, 'req');
+  const { email, password, firstName, lastName } = req.body;
   try {
-    if (!username) return res.status(400).send("Username is required");
+    if (!firstName) return res.status(400).send("First Name is required");
+    
+    if (!lastName) return res.status(400).send("Last Name is required");
 
     if (!email) return res.status(400).send("Email is required");
 
@@ -46,7 +50,7 @@ const register = async (req, res) => {
     if (userExist) {
       return res.status(400).send("Email is taken. Please use another email");
     }
-    const user = await new User({ email, username, password });
+    const user = await new User({ email, firstName, lastName, password });
     await user.save();
     return res.status(200).send('User added successfully.')
   } catch (err) {
