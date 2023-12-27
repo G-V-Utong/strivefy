@@ -6,16 +6,19 @@ import { useEffect } from "react";
 import { getAllTasks } from "../../redux/taskSlice";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-// import AddTask from "../../components/taskManager/AddTask";
 
+// Registering ChartJS elements and modules
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+// Functional component for the Dashboard
 const Dashboard = () => {
+  // Selecting task and user information from the Redux store
   const tasklist = useSelector((state) => state.task);
   const { AllTasks } = tasklist;
   const user = useSelector((state) => state.auth);
   const { currentUser } = user;
 
+  // Arrays to store pending and completed tasks
   let pendingTask = [];
   let completedTask = [];
   for (let i = 0; i < AllTasks.length; i++) {
@@ -30,18 +33,22 @@ const Dashboard = () => {
     }
   }
 
+  // Redux hook to dispatch actions
   const dispatch = useDispatch();
+
+  // Effect hook to fetch all tasks when the component mounts or when user data changes
   useEffect(() => {
     dispatch(getAllTasks(currentUser.token, currentUser.id));
   }, [dispatch, currentUser.token, currentUser.id]);
 
+  // Calculating percentages for pending and completed tasks
   const pendingTaskPercentage =
     100 *
     ((AllTasks.length - completedTask.length) / AllTasks.length).toFixed(1);
   const completedTaskPercentage =
     100 * ((AllTasks.length - pendingTask.length) / AllTasks.length).toFixed(1);
 
-  console.log(pendingTaskPercentage, completedTaskPercentage, AllTasks.length);
+  // Data for the doughnut chart
   const data = {
     labels: ["Pending", "Completed"],
     datasets: [
@@ -55,10 +62,12 @@ const Dashboard = () => {
     ],
   };
 
+  // JSX for rendering the Dashboard component
   return (
     <div>
       <div className="dashboard">
         <div className="dashboard__left">
+          {/* Rendering the Sidebar component */}
           <Sidebar />
         </div>
         <div className="dashboard__right">
@@ -75,6 +84,7 @@ const Dashboard = () => {
                   <p>Pending tasks</p>
                 </div>
               </Link>
+              
               <Link to="/taskmanager" className="">
                 <div className="done box">
                   <h1>{completedTask.length}</h1>
@@ -82,16 +92,17 @@ const Dashboard = () => {
                 </div>
               </Link>
             </div>
-            {/* <div className="add_task">
-            <AddTask/>
-            </div> */}
-            <div className="body__buttons">
             
+            <div className="body__buttons">
               <Link to="/taskmanager" className="body__buttons__primary">
-                <button className="body__buttons__primary">Create new task</button>
+                <button className="body__buttons__primary">
+                  Create new task
+                </button>
               </Link>
               <Link to="/taskmanager" className="">
-                <button className="body__buttons__secondary">Go to Task Manager</button>
+                <button className="body__buttons__secondary">
+                  Go to Task Manager
+                </button>
               </Link>
             </div>
           </div>

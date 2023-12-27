@@ -1,22 +1,23 @@
+// Importing necessary modules
 const mongoose = require("mongoose");
-require("dotenv").config();
+require("dotenv").config(); // Load environment variables from a .env file
 
-
+// Function for connecting to the MongoDB database
 const DBConnect = () => {
-    mongoose.connect(process.env.MONGOURI,
-        {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-          });
+    // Establishing a connection to MongoDB using Mongoose
+    mongoose.connect(process.env.MONGOURI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
 
     // Event handling for connection success
-    mongoose.connection.on("connected", ()=>{
-        console.log("connection to database is successful")
+    mongoose.connection.on("connected", () => {
+        console.log("Connection to the database is successful");
     });
 
     // Event handling for connection error
-    mongoose.connection.on("error", (err)=>{
-        console.log("connection to database failed", err)
+    mongoose.connection.on("error", (err) => {
+        console.log("Connection to the database failed", err);
     });
 
     // Event handling for disconnection
@@ -24,13 +25,14 @@ const DBConnect = () => {
         console.log('MongoDB disconnected');
     });
 
-    // Shutdown of the MongoDB connection when the Node.js process is terminated
+    // Handling the shutdown of the MongoDB connection when the Node.js process is terminated
     process.on('SIGINT', () => {
-        db.close(() => {
-          console.log('MongoDB connection closed due to app termination');
-          process.exit(0);
-        })});
+        mongoose.connection.close(() => {
+            console.log('MongoDB connection closed due to app termination');
+            process.exit(0);
+        });
+    });
+};
 
-}
-
-module.exports = {DBConnect}
+// Exporting the DBConnect function for use in other modules
+module.exports = { DBConnect };

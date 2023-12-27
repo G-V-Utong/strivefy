@@ -1,23 +1,25 @@
 import "./registration.scss";
-import React from "react";
 import "../../styles/components/_button.scss";
 import { useState } from "react";
 import {useDispatch } from 'react-redux'
-import { register, signin } from "../../redux/authSlice";
+import { signin } from "../../redux/authSlice";
 
+
+// Functional component for the Signin form
 const Signin = () => {
-
+    // Redux hook to dispatch actions
     const dispatch = useDispatch();
-
+    // State to manage form input values
     const [state, setState] = useState({
         email: "",
         password: "",
         confirmPassword: "",
       });
     
+      // Handling form submission
       const handleSubmit = (e) => {
         e.preventDefault();
-
+        // Dispatching signin action with user credentials
         dispatch(
           signin({
             password: state.password,
@@ -26,14 +28,14 @@ const Signin = () => {
         )
       }
     
+      // Handling input changes and updating the state
       const handleChange = (e) => {
         setState({
           ...state,
           [e.target.name]: e.target.value
         })
       }
-      // console.log(state.email, state.password, state.confirmPassword, state.username);
-      
+      // JSX for the Signin component
   return (
     <div>
       <div className="signup-form">

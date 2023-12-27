@@ -1,17 +1,21 @@
-import React, { useState } from "react";
-import './addtask.scss';
+import { useState } from "react";
+import "./addtask.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { addTask } from "../../redux/taskSlice";
 
-
+// Functional component for adding tasks
 const AddTask = () => {
-    const dispatch = useDispatch();
-    const { auth } = useSelector((state) => ({...state}));
-    const { currentUser } = auth;
+  // Redux hooks for dispatching actions and accessing authentication state
+  const dispatch = useDispatch();
+  const { auth } = useSelector((state) => ({ ...state }));
+  const { currentUser } = auth;
+
+  // State to manage the input value for the task
   const [state, setState] = useState({
     task: "",
   });
 
+  // Handling input changes and updating the state
   const handleChange = (e) => {
     setState({
       ...state,
@@ -19,15 +23,18 @@ const AddTask = () => {
     });
   };
 
+  // Handling form submission to add a task
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Dispatching addTask action with task details and user ID
     dispatch(addTask(state.task, currentUser.id));
+    // Resetting the task input field after submission
     setState({
-        task: ''
-        
+      task: "",
     });
-  }
+  };
 
+  // JSX for the AddTask component
   return (
     <div>
       <div className="addtask">
@@ -41,7 +48,7 @@ const AddTask = () => {
           />
 
           <div className="body__buttons">
-          <button className="body__buttons__secondary">Add Task</button>
+            <button className="body__buttons__secondary">Add Task</button>
           </div>
         </form>
       </div>

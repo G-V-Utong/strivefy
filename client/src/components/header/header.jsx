@@ -1,23 +1,29 @@
 import "./header.scss";
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { logoutSuccess } from "../../redux/authSlice";
 import history from "../../history";
 import "../../styles/components/_button.scss";
 
+// Functional component for the header
 const Header = () => {
+
+  // Redux hook to dispatch actions
   const dispatch = useDispatch();
+  // Selecting authentication state from the Redux store
   const { auth } = useSelector((state) => ({ ...state }));
 
+  // Handling click event for the sign-out button
   const handleClick = (e) => {
     e.preventDefault();
     dispatch(logoutSuccess());
     localStorage.removeItem("auth");
     history.push("/signin");
+    // Reloading the window for a complete logout effect
     window.location.reload();
   };
 
+  // JSX for the header component
   return (
     <div className="header_container">
       <div className="header_container__subcontainer">

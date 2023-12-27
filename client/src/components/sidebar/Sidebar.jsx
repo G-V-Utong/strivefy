@@ -5,11 +5,15 @@ import { AiOutlineDashboard  } from "react-icons/ai";
 import { BsListTask } from "react-icons/bs";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RxAvatar } from "react-icons/rx";
-// import Avatar from 'react-avatar';
 
+// Functional component for the Sidebar
 const Sidebar = () => {
+  // Selecting authentication state from the Redux store
     const {auth} = useSelector((state) => ({...state}));
+    // Extracting current user information from the authentication state
     const {currentUser} = auth;
+
+  // JSX for the Sidebar component
   return (
     <div>
       <ul className="sidebar">

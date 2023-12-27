@@ -4,9 +4,12 @@ import { useState } from "react";
 import {useDispatch } from 'react-redux'
 import { register } from "../../redux/authSlice";
 
+// Functional component for the Signup form
 const Signup = () => {
+  // Redux hook to dispatch actions
   const dispatch = useDispatch();
 
+   // State to manage form input values
   const [state, setState] = useState({
     email: "",
     password: "",
@@ -15,9 +18,10 @@ const Signup = () => {
     lastName: ""
   });
 
+    // Handling form submission
   const handleSubmit = (e) => {
       e.preventDefault();
-
+      // Dispatching register action with user registration details
       dispatch(
         register({
           firstName: state.firstName,
@@ -28,14 +32,15 @@ const Signup = () => {
       )
   }
 
+  // Handling input changes and updating the state
   const handleChange = (e) => {
     setState({
       ...state,
       [e.target.name]: e.target.value
     })
   }
-  // console.log(state.email, state.password, state.confirmPassword, state.username);
   
+  // JSX for the Signup component
   return (
     <div>
       <div className="signup-form">
