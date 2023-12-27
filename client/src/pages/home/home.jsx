@@ -1,8 +1,9 @@
-import React from "react";
+
 import "./home.scss";
 import "../../styles/components/_button.scss";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const Home = () => {
   const { auth } = useSelector((state) => ({ ...state }));
@@ -40,6 +41,12 @@ const Home = () => {
           <div className="home__container__hero__image">
             <img src="/public/images/4894122.jpg" alt="hero_image" />
           </div>
+        </div>
+
+        <div className="home__container__infoContainer">
+          <p>TASK MANAGEMENT</p>
+          <h1>All your tasks in one place</h1>
+          <img src="/public/images/taskmanager.PNG" alt="" />
         </div>
       </div>
     </div>
