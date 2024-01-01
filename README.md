@@ -26,6 +26,7 @@ Strivefy is a robust task management application meticulously crafted with React
 - [Background](#background)
 - [Architecture](#architecture)
 - [Models](#models)
+- [Infrastructure](#infrastructure)
 - [Install](#install)
 - [Usage](#usage)
 - [API](#api)
@@ -69,9 +70,16 @@ Users can communicate with the task management application by using its REST API
 
 The database has two models: user and task, with a one-to-many relationship.
 
-### Any optional sections
+## Infrastructure
+
+- Branching and Merging: Use the GitHub flow for version control and collaboration among team members.
+- Deployment Strategy: With CI/CD to deploy the frontend and backend on GitHub Pages/ Netlify or Vercel.
+- Data Population: Integrate a database for persistent storage with Node.js MongoDB.
+- Testing: Implement Node.js unit testing for backend functionality and manual testing for the frontend user interface.
 
 ## Install
+
+This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
 
 ```
 ```
@@ -80,11 +88,11 @@ The database has two models: user and task, with a one-to-many relationship.
 
 ## Usage
 
+```sh
+$ npm start <command> 
+or 
+$ yarn <command>
 ```
-npm start dev or yarn dev
-```
-
-Note: The `license` badge image link at the top of this file should be updated with the correct `:user` and `:repo`.
 
 ### Any optional sections
 
@@ -102,8 +110,6 @@ PRs accepted.
 
 Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
-### Any optional sections
-
 ## License
 
-[MIT © Richard McRichface.](../LICENSE)
+[MIT © Godswill Utong.](../LICENSE)
