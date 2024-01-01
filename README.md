@@ -25,6 +25,7 @@ Strivefy is a robust task management application meticulously crafted with React
 
 - [Background](#background)
 - [Architecture](#architecture)
+- [Models](#models)
 - [Install](#install)
 - [Usage](#usage)
 - [API](#api)
@@ -61,17 +62,16 @@ The application is targeted at solo users who want to simply organize their task
 ## Architecture 
 ![architecture](https://github.com/G-V-Utong/strivefy/blob/main/client/public/images/Simple%20architecture.PNG)
 
-Users can communicate with the task management application by using its REST APIs. The client-side is able to communicate with the server-side due to Cross-origin Resource Sharing (CORS). When a user makes a request (sign up, sign in, add a task etc), information is dispatched to the server by Redux Dispatch
+Users can communicate with the task management application by using its REST APIs. The client-side is able to communicate with the server-side due to Cross-origin Resource Sharing (CORS). When a user makes a request (sign up, sign in, add a task etc), information is dispatched to the server by Redux Dispatch.
 
-## Database Models
+## Models
 ![Models](https://github.com/G-V-Utong/strivefy/blob/main/client/public/images/Models.PNG)
- Add Index  Add Column 
+
+The database has two models: user and task, with a one-to-many relationship.
 
 ### Any optional sections
 
 ## Install
-
-This module depends upon a knowledge of [Markdown]().
 
 ```
 ```
@@ -81,6 +81,7 @@ This module depends upon a knowledge of [Markdown]().
 ## Usage
 
 ```
+npm start dev or yarn dev
 ```
 
 Note: The `license` badge image link at the top of this file should be updated with the correct `:user` and `:repo`.
