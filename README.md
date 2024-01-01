@@ -33,7 +33,30 @@ Strivefy is a robust task management application meticulously crafted with React
 
 ## Background
 
+### Overview
+Strivefy is a robust and intuitive task management application designed to streamline productivity and enhance collaboration. Tailored for individuals, Strivefy provides a seamless and efficient solution for organizing tasks, and achieving goals.
 
+With a user-centric approach, Strivefy prioritizes simplicity without compromising functionality. The application empowers users to effortlessly create, assign, and track tasks, fostering a clear and structured workflow. Key features include a dynamic task dashboard, customizable priority settings, real-time collaboration tools, and insightful progress tracking. Strivefy leverages technologies, including NextJs, ReactJs, and Redux, to deliver a responsive and seamless user experience across web and mobile platforms.
+
+### Motivation
+The primary motivations or choosing this project were to finally master combining backend and frontend technology to create a functional application, and to be able to master CRUD functionalities. The task management application was the easiest project to achieve these two goals.
+
+### Target Audience
+The application is targeted at solo users who want to simply organize their tasks and have them in one place. It comes with a dashboard that tracks tasks and give users real-time information about their progress.
+
+### Technology Stack
+#### Front-end
+- Libraries: React
+- Languages: HTML, CSS (SCSS), JavaScript
+- Platforms: Web browsers (Chrome, Firefox, etc.)
+- Frameworks: React
+#### Back-End
+- Language: JavaScript
+- Runtime Environment: NodeJs
+- Framework: ExpressJs
+#### Database
+- MongoDB
+- library: Mongoose
 ## Architecture 
 
 ## Database Models
