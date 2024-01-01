@@ -31,11 +31,8 @@ Strivefy is a robust task management application meticulously crafted with React
 - [Contributing](#contributing)
 - [License](#license)
 
-## Security
-
-### Any optional sections
-
 ## Background
+
 
 ## Architecture 
 
