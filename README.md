@@ -24,6 +24,7 @@ Strivefy is a robust task management application meticulously crafted with React
 ## Table of Contents
 
 - [Background](#background)
+- [Author](#author)
 - [Architecture](#architecture)
 - [Models](#models)
 - [Infrastructure](#infrastructure)
@@ -60,6 +61,10 @@ The application is targeted at solo users who want to simply organize their task
 #### Database
 - MongoDB
 - library: Mongoose
+
+## AUthor 
+- Godswill Utong (https://www.linkedin.com/in/godswill-utong-acifc-acib-10252915b) 
+
 ## Architecture 
 ![architecture](https://github.com/G-V-Utong/strivefy/blob/main/client/public/images/Simple%20architecture.PNG)
 
@@ -84,8 +89,6 @@ This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go che
 ```
 ```
 
-### Any optional sections
-
 ## Usage
 
 ```sh
@@ -94,17 +97,7 @@ or
 $ yarn <command>
 ```
 
-### Any optional sections
-
-## API
-
-### Any optional sections
-
-## More optional sections
-
 ## Contributing
-
-See [the contributing file](CONTRIBUTING.md)!
 
 PRs accepted.
 
