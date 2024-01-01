@@ -81,17 +81,46 @@ The database has two models: user and task, with a one-to-many relationship.
 
 ## Install
 
+A step-by-step series of examples that tell you how to get a development environment running.
 This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
 
+1. Clone the repository:
+```sh
+git clone https://github.com/G-V-Utong/strivefy.git
 ```
+
+2. Navigate to the project directory:
+```sh
+cd strivefy
 ```
+
+3. Install dependencies. Ensure that you install the dependencies in the client, server and database directories too. You can do that by navigating to the respective directories and running the following command:
+```sh
+npm install
+or
+yarn add
+```
+
+4. Set up the environment variables: Create a .env file in the root directory of the project, and add your MogoDB URI:
+```
+MONGOURI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/
+```
+
+5. Run the development server:
+```sh
+npm run dev
+or
+yarn dev
+```
+
+6. Open http://localhost:5173 with your browser to see the result.
 
 ## Usage
 
 ```sh
-$ npm start <command> 
-or 
-$ yarn <command>
+npm run dev
+or
+yarn dev
 ```
 
 ## Contributing
