@@ -50,6 +50,7 @@ The application is targeted at solo users who want to simply organize their task
 - Languages: HTML, CSS (SCSS), JavaScript
 - Platforms: Web browsers (Chrome, Firefox, etc.)
 - Frameworks: React
+- State Management library: Redux
 #### Back-End
 - Language: JavaScript
 - Runtime Environment: NodeJs
@@ -60,10 +61,10 @@ The application is targeted at solo users who want to simply organize their task
 ## Architecture 
 ![architecture](https://github.com/G-V-Utong/strivefy/blob/main/client/public/images/Simple%20architecture.PNG)
 
-Users can communicate with the task management application by using its REST APIs. 
+Users can communicate with the task management application by using its REST APIs. The client-side is able to communicate with the server-side due to Cross-origin Resource Sharing (CORS). When a user makes a request (sign up, sign in, add a task etc), information is dispatched to the server by Redux Dispatch
 
 ## Database Models
-
+![Models](https://github.com/G-V-Utong/strivefy/blob/main/client/public/images/Models.PNG)
  Add Index  Add Column 
 
 ### Any optional sections
