@@ -59,8 +59,8 @@ The application is targeted at solo users who want to simply organize their task
 - MongoDB
 - library: Mongoose
 
-## AUthor 
-- Godswill Utong (https://www.linkedin.com/in/godswill-utong-acifc-acib-10252915b) 
+## Author 
+- Godswill Utong [LinkedIn](https://www.linkedin.com/in/godswill-utong-acifc-acib-10252915b) 
 
 ## Architecture 
 ![architecture](https://github.com/G-V-Utong/strivefy/blob/main/client/public/images/Simple%20architecture.PNG)
