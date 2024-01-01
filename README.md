@@ -58,6 +58,9 @@ The application is targeted at solo users who want to simply organize their task
 - MongoDB
 - library: Mongoose
 ## Architecture 
+![architecture](https://github.com/G-V-Utong/strivefy/blob/main/client/public/images/Simple%20architecture.PNG)
+
+Users can communicate with the task management application by using its REST APIs. 
 
 ## Database Models
 
