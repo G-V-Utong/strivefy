@@ -2,22 +2,31 @@
     position: relative;
     bottom:0px;
     width:100%;
+    height: 400px;
     flex: 0 0 auto;
     //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.06);
     z-index: 10;
     background-color: #4C4848;
+    padding-top: 100px;
 
     &__subcontainer {
         max-width: 70%;
         margin: auto;
+        height: 100%;
+        color: white;
+        
+        p {
+            font-size: smaller;
+        }
     }
 }
 
-.header {
+.footer {
     display: flex;
+    width: inherit;
     justify-content: space-between;
-    align-items: center;
-    height: 80px;
+    align-items: start;
+    height: 250px;
     // padding: 0 250px;
     
 
@@ -26,53 +35,34 @@
         align-items: center;
     }
 
-    &__menu {
-        width: 35%;
+    &__info{
+        display: flex;
+        color: white;
+        justify-content: space-evenly;
+        flex: 1;
+        
+        &__subcontainer {
+            h3 {
+                margin-bottom: 15px;
+                font-size: large;
+            }
+            li {
+                margin-bottom: 10px;
+                cursor: pointer;
 
-        &__list {
-            display: flex;
-            flex: 1;
-            justify-content: space-between;
-            
-        }
-
-        &__listitem {
-            cursor: pointer;
-            &:hover {
-                color: #FE4066;
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }
 
-    &__buttons {
-        border-left: 1px solid #d3d3d3;
-        padding-left: 10px;
-        button {
-            font-family: "Poppins", sans-serif;
-            margin-left: 10px;
-            padding: 10px;
-            border: none;
-            outline: none;
-            border-radius: 10px;
-            min-width: 150px;
-            font-size: large;
-            font-weight: 600;
-        }
-        &__primary {
-            background-color: #FE4066;
-            color: white;
-            cursor: pointer;
-            &:hover {
-                background-color: #fe1241;
-            }
-        }
-
-        &__secondary {
-            background-color: white;
-            cursor: pointer;
-            &:hover {
-                background-color: #F0F0F0;
-            }
+    &__links {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        :nth-child(1){
+            margin-bottom: 10px;
         }
     }
 }

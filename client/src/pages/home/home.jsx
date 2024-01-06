@@ -4,6 +4,7 @@ import "../../styles/components/_button.scss";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import React from "react";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   const { auth } = useSelector((state) => ({ ...state }));
@@ -49,6 +50,7 @@ const Home = () => {
           <img src="/public/images/taskmanager.PNG" alt="" />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
