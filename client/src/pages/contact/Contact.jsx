@@ -12,7 +12,7 @@ const Contact = () => {
       <div className="about__hero">
         <h1>Contact us</h1>
         <img
-          src="/public/images/contact.webp"
+          src="/public/images/contact-min.jpg"
           alt="contact picture"
           width={500}
         />
