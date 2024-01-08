@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 
 // Enable build-ready react app in public folder
-app.use(express.static(path.join(__dirname + "public")))
+app.use(express.static(path.join(__dirname + "/public")))
 
 // Parse JSON requests
 app.use(express.json());
