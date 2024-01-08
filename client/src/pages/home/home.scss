@@ -2,44 +2,44 @@
 
 .home {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   // @include flex-center(flex, row, center, start);
   // flex: 1 1 auto;
-  margin-top: 100px;
-
+  // margin-top: 100px;
 
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: auto;
 
     &__hero {
-      
+      margin-top: 100px;
       display: flex;
       height: inherit;
       max-width: 70%;
       justify-content: space-between;
       gap: 30px;
+      margin-bottom: 100px;
 
       &__banner {
         width: 50%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
         justify-content: center;
         gap: 30px;
 
         h1 {
-            font-size: 3rem;
+          font-size: 3rem;
         }
         p {
-            margin-bottom: 3.5rem;
+          margin-bottom: 3.5rem;
         }
 
         span {
-            color: #FE4066;
+          color: #fe4066;
         }
       }
 
@@ -49,26 +49,130 @@
         justify-content: center;
 
         img {
-          height: auto;
-          width: auto\9;
+          height: fit-content;
+          width: auto;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
     }
 
     &__infoContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
       max-width: 70%;
-      height: 900px;
-      background-color: #ff9baf;
+      height: 700px;
+      background-color: #ffc1ce;
       border-radius: 25px;
+      margin-bottom: 100px;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+        font-weight: normal;
+      }
+
+      &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        &__text {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          // height: fit-content;
+
+          > p {
+            font-size: medium;
+          }
+        }
+      }
 
       img {
         width: 50%;
-        height: auto;
-        width: auto\9;
+        height: fit-content;
+        width: 70%;
         border-radius: 25px;
       }
-      p {
-        color:#FE4066;
+      > p {
+        font-size: small;
+        color: #fe4066;
+      }
+    }
+
+    .showcase {
+      display: flex;
+      justify-content: space-evenly;
+      height: 600px;
+      width: 100%;
+      background-color: #fbe6eb;
+      background: url(/public/images/background-vectors/Group\ 3faq.svg),
+        url(/public/images/background-vectors/Group\ 2faq.svg), var(--linear-gradient, linear-gradient(180deg, #fbe6eb 90.99%, #fbe6eb 100%));
+      background-position: left top, right bottom;
+      background-repeat: no-repeat;
+      margin-bottom: 50px;
+
+      img {
+        height: fit-content;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+
+        >h1 {
+          font-size: 3rem;
+          font-weight: normal;
+        }
+
+        >p {
+          font-size: large;
+        }
+      }
+    }
+    .showcase_rev {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      height: 600px;
+      width: 100%;
+      margin-bottom: 50px;
+      // background-color: #fbe6eb;
+      // background: url(/public/images/background-vectors/Group\ 3faq.svg),
+      //   url(/public/images/background-vectors/Group\ 2faq.svg);
+      // background-position: left top, right bottom;
+      // background-repeat: no-repeat;
+
+      img {
+        height: fit-content;
+        width: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+
+        >h1 {
+          font-size: 3rem;
+          font-weight: normal;
+        }
+
+        >p {
+          font-size: large;
+        }
       }
     }
   }
