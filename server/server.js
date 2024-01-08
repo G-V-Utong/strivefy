@@ -6,12 +6,16 @@ const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');  // Import authentication routes
 const taskRoutes = require('./routes/taskRoutes');  // Import task routes
 const morgan = require('morgan');  // Import morgan for logging
+const path = require('path');
 
 // Create an Express application
 const app = express();
 
 // Enable Cross-Origin Resource Sharing (CORS)
 app.use(cors());
+
+// Enable build-ready react app in public folder
+app.use(express.static(path.join(__dirname + "public")))
 
 // Parse JSON requests
 app.use(express.json());
