@@ -43,7 +43,7 @@ const Home = () => {
             </div>
           </div>
           <div className="home__container__hero__image">
-            <img src="/public/images/4894122.jpg" alt="hero_image" />
+            <img src="/images/4894122.jpg" alt="hero_image" />
           </div>
         </div>
 
@@ -80,12 +80,12 @@ const Home = () => {
               </div>
             </div>
             </div>
-          <img src="/public/images/taskmanager.PNG" alt="" />
+          <img src="/images/taskmanager.PNG" alt="" />
           </div>
           
         </div>
         <div className="showcase">
-          <img src="/public/images/4871715.jpg" alt="showcase logo"  data-aos='fade-right' data-aos-duration='1000' />
+          <img src="/images/4871715.jpg" alt="showcase logo"  data-aos='fade-right' data-aos-duration='1000' />
           <div className="showcase__text" data-aos='fade-left' data-aos-duration='1000'>
             <h1>
             Seamlessly organize your life
@@ -96,7 +96,7 @@ const Home = () => {
           </div>
         </div>
         <div className="showcase_rev">
-          <img src="/public/images/4891584.jpg" alt="showcase logo"  data-aos='fade-right' data-aos-duration='1000' />
+          <img src="/images/4891584.jpg" alt="showcase logo"  data-aos='fade-right' data-aos-duration='1000' />
           <div className="showcase__text" data-aos='fade-left' data-aos-duration='1000'>
             <h1>
             Unlock efficiency
@@ -107,7 +107,7 @@ const Home = () => {
           </div>
         </div>
         <div className="showcase">
-          <img src="/public/images/6914347.jpg" alt="showcase logo"  data-aos='fade-right' data-aos-duration='1000' />
+          <img src="/images/6914347.jpg" alt="showcase logo"  data-aos='fade-right' data-aos-duration='1000' />
           <div className="showcase__text" data-aos='fade-left' data-aos-duration='1000'>
             <h1>
             Conquer your daily grind 

@@ -9,7 +9,7 @@ const AboutUs = () => {
       <div className="about__hero">
         <h1>About us</h1>
         <img
-          src="/public/images/Aboutus.jpg"
+          src="/images/Aboutus.jpg"
           alt="Godswill Utong"
           width={500}
         />

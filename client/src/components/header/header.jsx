@@ -30,7 +30,7 @@ const Header = () => {
         <nav className="header">
           <div className="header__logo">
             <Link to="/" className="">
-              <img src="public/images/Main logo.PNG" alt="Logo" height={40} />
+              <img src="/images/Main logo.PNG" alt="Logo" height={40} />
             </Link>
           </div>
           <div className="header__menu">
