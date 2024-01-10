@@ -65,13 +65,13 @@ const Dashboard = () => {
   // JSX for rendering the Dashboard component
   return (
     <div>
-      <div className="dashboard">
-        <div className="dashboard__left">
+      <div className="main">
+        <div className="main__left">
           {/* Rendering the Sidebar component */}
           <Sidebar />
         </div>
-        <div className="dashboard__right">
-          <div className="dashboard__rightContent">
+        <div className="main__right">
+          <div className="main__rightContent">
             <h2>Task Status Dashboard</h2>
             <div className="taskcount">
               <div className="chart box">
@@ -86,7 +86,7 @@ const Dashboard = () => {
               </Link>
               
               <Link to="/taskmanager" className="">
-                <div className="done box">
+                <div className="completed box">
                   <h1>{completedTask.length}</h1>
                   <p>Completed tasks</p>
                 </div>

@@ -1,6 +1,6 @@
 @import '../../styles/abstract/mixins';
 
-.dashboard {
+.main {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -57,7 +57,7 @@
         }
     }
 
-    .done {
+    .completed {
         display: flex;
         flex-direction: column;
 

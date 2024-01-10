@@ -7,12 +7,12 @@ import "./tasklist.scss";
 // Functional component for rendering the list of tasks
 const TaskList = () => {
   // Selecting authentication and task state from the Redux store
-  const auth = useSelector((state) => state.auth);
-  const tasks = useSelector((state) => state.task);
+  const authenticate = useSelector((state) => state.auth);
+  const tasksState = useSelector((state) => state.task);
 
   // Extracting relevant information from authentication and task state
-  const { currentUser } = auth;
-  const { AllTasks } = tasks;
+  const { currentUser } = authenticate;
+  const { AllTasks } = tasksState;
 
   // Redux hook to dispatch actions
   const dispatch = useDispatch();
