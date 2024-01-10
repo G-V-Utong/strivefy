@@ -46,8 +46,6 @@ const signin = async (req, res) => {
 
 // User registration endpoint
 const register = async (req, res) => {
-  // Log the request body for debugging purposes
-  console.log(req.body, "req");
 
   // Extract user registration information from the request body
   const { email, password, firstName, lastName } = req.body;

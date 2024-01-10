@@ -38,12 +38,12 @@ const Signin = () => {
       // JSX for the Signin component
   return (
     <div>
-      <div className="signup-form">
-        <div className="signup-form__wrapper">
+      <div className="signin-form">
+        <div className="signin-form__wrapper">
           <form className="form" onSubmit={handleSubmit}>
             <h4>Sign In</h4>
 
-            <div className="form-group">
+            <div className="form-container">
               <input
                 type="email"
                 name="email"
@@ -55,7 +55,7 @@ const Signin = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-container">
               <input
                 type="password"
                 name="password"
@@ -67,7 +67,7 @@ const Signin = () => {
               />
             </div>
 
-            <div className="form-group"> 
+            <div className="form-container"> 
             <div className="body__buttons">
             <button className="body__buttons__primary">Sign in</button>
             </div>

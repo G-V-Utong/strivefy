@@ -43,11 +43,11 @@ const Signup = () => {
   // JSX for the Signup component
   return (
     <div>
-      <div className="signup-form">
-        <div className="signup-form__wrapper">
+      <div className="signin-form">
+        <div className="signin-form__wrapper">
           <form className="form" onSubmit={handleSubmit}>
             <h4>Sign up</h4>
-            <div className="form-group">
+            <div className="form-container">
               <input
                 type="text"
                 placeholder="Enter your first name"
@@ -57,7 +57,7 @@ const Signup = () => {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="form-container">
               <input
                 type="text"
                 placeholder="Enter your last name"
@@ -68,7 +68,7 @@ const Signup = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-container">
               <input
                 type="email"
                 name="email"
@@ -80,7 +80,7 @@ const Signup = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-container">
               <input
                 type="password"
                 name="password"
@@ -92,7 +92,7 @@ const Signup = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-container">
               <input
                 type="password"
                 name="confirmPassword"
@@ -104,7 +104,7 @@ const Signup = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-container">
               <div className="body__buttons">
                 <button className="body__buttons__primary">Sign Up</button>
               </div>
